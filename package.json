@@ -1,0 +1,31 @@
+{
+  "name": "maria",
+  "version": "1.0.0",
+  "main": "prod/index.js",
+  "author": "opticXC <aabishmalik018@gmail.com>",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "yarn compile && yarn start",
+    "test": "yarn compile &&  node ./prod/test.js",
+    "compile": "yarn tsc",
+    "start": "yarn node ./prod/index.js",
+    "deploy": "yarn compile && yarn node ./prod/register.js",
+    "reset": "yarn compile && yarn node ./prod/reset.js",
+    "clean": "rm -r ./prod && rm -r ./node_modules && rm -r ./.cache"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.34.0",
+    "nodemon": "^2.0.20",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "enka-network-api": "^1.11.1",
+    "mongodb": "^5.0.1"
+  }
+}
